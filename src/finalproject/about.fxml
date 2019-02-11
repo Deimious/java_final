@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #111;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="djbzf5finalproject.aboutController">
+   <children>
+      <TextArea blendMode="SRC_ATOP" editable="false" layoutX="432.0" layoutY="136.0" prefHeight="786.0" prefWidth="1046.0" style="-fx-text-fill: #FFF; -fx-control-inner-background: #111; -fx-border-color: #111;" text="Dylan Bunch (djbzf5) (12453913)&#10;&#10;Final Project&#10;&#10;This application is a music player/playlist editor. With this program you may create a playlist, add to it, listen to it, save it, and open saved playlists. There is also a visualizer tab in which you can watch the audio spectrum of the music. All of these functions are accessible from the context menus at theh top left. &quot;New&quot; declares a new playlist and discards the current. &quot;Open&quot; opens a saved playlist (.txt) file. &quot;Add&quot; adds tracks to the playlist. &quot;Clear&quot; clears the playlist. The leftmost slider is labeled volume, and this is how to adjust volume (scales left-to-right in 0-100). The three buttons are labeled &quot;Prev&quot;, &quot;Play/Pause&quot;, and &quot;Next&quot;. They work as one would expect them to, however it's worty to note that &quot;Next&quot; and &quot;Prev&quot; will wrap around and playback must be paused with the &quot;Play/Pause&quot; button to stop it, or &quot;Clear&quot; it from File menu item. The slider to the left of these buttons is the track's time-slider. Adjust current position in the currently-playing song with this (scales left to right 0-max_track_time). It's also worthy of noting that clicking on an entry in the playlist will play that song." wrapText="true">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <font>
+            <Font name="Terminess (TTF) Bold Nerd Font Complete" size="19.0" />
+         </font>
+      </TextArea>
+      <MenuBar prefHeight="29.0" prefWidth="1920.0" style="-fx-background-color: #222;" stylesheets="@DarkTheme.css">
+         <menus>
+            <Menu mnemonicParsing="false" text="View">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#switchScenesPlaylist" text="Playlist" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchScenesVisualizer" text="Visualizer" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
